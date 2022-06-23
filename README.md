@@ -27,8 +27,10 @@ If .env file with port is not available, the backend will run on port 8081
 - Open the jumia-frontend directory on a new window/terminal
 - install all dependencies with command `npm i`
 - run the frontend with the command `npm start`
+- check your axios file to configure your port. Default port at axios.js is 8081
 
 
 ##Testing Backend
 - Mock the Database with the command `make mock`
-- Test file can be found in /handler/test directory
+- Handler Test with mocked DB can be found in /handler/test directory
+- Unit test for services can be found in /services directory

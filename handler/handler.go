@@ -3,7 +3,7 @@ package handler
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/kjasuquo/jumia_task/database"
-	"github.com/kjasuquo/jumia_task/service"
+	"github.com/kjasuquo/jumia_task/services"
 	"net/http"
 )
 
@@ -21,7 +21,7 @@ func (h *Handler) SearchNumberHandler(c *gin.Context) {
 		return
 	}
 
-	numbers := service.GetAllNumbers(customer)
+	numbers := services.GetAllValidatedNumbers(customer)
 
 	num, err := h.DB.ScanNumberTable()
 	if err != nil {
